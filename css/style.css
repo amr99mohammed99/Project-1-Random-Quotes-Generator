@@ -153,6 +153,12 @@ nav h1 {
   color: #fff;
 }
 
+.colored {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+}
+
 .stop {
   color: #f44336;
 }
@@ -238,8 +244,6 @@ footer .content-footer {
 
 .span-red {
   color: red;
-  /* box-shadow:  0px 0px 25px rgba(255, 255, 255, 0.8); */
-
 }
 .italic {
   font-style: italic;

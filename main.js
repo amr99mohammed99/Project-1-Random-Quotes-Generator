@@ -26,15 +26,36 @@ async function generateQuote() {
   authorTx.innerHTML = quote.author;
 }
 
+// Track whether autoplay is active
+let isAutoPlaying = false;
+
 function startAutoPlay() {
+  // Prevent further clicks if already playing
+  if (isAutoPlaying) {
+    return;
+  } 
+  // Mark autoplay as active
+  isAutoPlaying = true; 
+
   intervalId = setInterval(generateQuote, 2000);
   autoStatus.innerHTML = "Auto: ON";
   autoStatus.style.backgroundColor = "#1E1B1E";
+  autoBtn.classList.add("colored");
+
+  // Optionally, disable the button while autoplay is running
+  autoBtn.disabled = true;
 }
 
 function stopAutoPlay() {
   clearInterval(intervalId);
   autoStatus.innerHTML = "";
   autoStatus.style.backgroundColor = "transparent";
+  autoBtn.classList.remove("colored");
   intervalId = null;
+
+  // Re-enable the button if autoplay is stopped
+  autoBtn.disabled = false;
+  // Reset the autoplay flag
+  isAutoPlaying = false;
 }
+
