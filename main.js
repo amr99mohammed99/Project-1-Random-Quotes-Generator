@@ -13,7 +13,7 @@ autoBtn.onclick = startAutoPlay;
 stopBtn.onclick = stopAutoPlay;
 
 async function getQuotes() {
-  const response = await fetch("quotes.json");
+  const response = await fetch("/quotes.json");
   const data = await response.json();
   return data;
 }
