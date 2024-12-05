@@ -180,7 +180,7 @@ nav h1 {
   -o-border-radius: 6%;
   display: flex;
   justify-self: center;
-  margin: 0;
+  margin: 0 auto;
   color: white;
 }
 
@@ -198,6 +198,7 @@ footer .content-footer {
   justify-content: center;
   align-items: center;
 }
+
 .before-end, .end  {
   font-size: 10px;
   font-family: "PT Serif", serif;
@@ -245,6 +246,7 @@ footer .content-footer {
 .span-red {
   color: red;
 }
+
 .italic {
   font-style: italic;
 }
@@ -255,14 +257,14 @@ footer .content-footer {
 
 /* -------------  Start Media Queries  ------------- */
 /* Small */
-@media screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .quotes {
     margin: 0 8px;
   }
 };
 
 /* Medium */
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 576px) and (max-width: 767px) {
   .quotes {
     margin: 0 8px;
   }
